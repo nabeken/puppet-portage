@@ -22,7 +22,7 @@ Puppet::Type.newtype(:portage_mask) do
     end
 
     newproperty(:target) do
-	desc "The file in which to store the aliases.  Only used by
+	desc "The file in which to store the settings.  Only used by
 	    those providers that write to disk."
 
 	defaultto {

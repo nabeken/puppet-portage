@@ -14,7 +14,7 @@ Puppet::Type.newtype(:portage_keyword) do
     end
 
     newproperty(:target) do
-	desc "The file in which to store the aliases.  Only used by
+	desc "The file in which to store the keywords.  Only used by
 	    those providers that write to disk."
 
 	defaultto {
