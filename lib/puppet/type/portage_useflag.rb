@@ -71,8 +71,8 @@ Puppet::Type.newtype(:portage_useflag) do
 	    end
 
 	    def to_line(record)
-		enable = record[:enable].join(" ")
-		disable = record[:disable].collect { |u| "-#{u}" }.join(" ")
+		enable = record[:enable].join(" ") unless record[:enable].first.empty?
+		disable = record[:disable].collect { |u| "-#{u}" }.join(" ") unless record[:disable].first.empty?
 
 		return "%s %s %s" % [record[:name], enable, disable]
 	    end
